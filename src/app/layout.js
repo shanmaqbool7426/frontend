@@ -9,7 +9,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-       
         <Provider store={store}>
           <Navbar />
           {children}</Provider>
