@@ -1,0 +1,112 @@
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.imageWrapper {
+  position: relative;
+  padding-top: 75%;
+  background: #f7f7f7;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.outOfStock {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(244, 67, 54, 0.9);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.content {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: #666;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.viewButton,
+.addToCartButton {
+  padding: 0.625rem;
+  border-radius: 6px;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.viewButton {
+  background: #e0e7ff;
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.addToCartButton {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.addToCartButton:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+}
+
+.viewButton:hover {
+  background: #c7d2fe;
+}
+
+.addToCartButton:hover:not(:disabled) {
+  background: #4338ca;
+}
